@@ -1,0 +1,20 @@
+.app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.background {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(133, 184, 210, 0.579);
+    background: linear-gradient(180deg, rgba(95, 137, 211, 0.178) 0%, rgba(255,255,255,0.2498249299719888) 60%);    
+}

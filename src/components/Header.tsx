@@ -1,12 +1,13 @@
 import s from './Header.module.scss'
 import { Link, NavLink } from 'react-router-dom'
+import myphotoImg from '../../public/images/myphoto.jpg'
 const Header = () => {
 
     return (
         <header className={s.header}>
             <Link to='/'>
                 <div className={s.logo}>
-                    <img className={s.img} src='../../public/images/myphoto.jpg' alt="Тагир Воропаев frontend разработчик программист React" />
+                    <img className={s.img} src={myphotoImg} alt="Тагир Воропаев frontend разработчик программист React" />
                 </div>
             </Link>
             <div className={s.content}>
@@ -16,6 +17,9 @@ const Header = () => {
                 </div>
                 <nav className={s.nav}>
                     <ul className={s.list}>
+                        <li >
+                            <NavLink className={({ isActive }) => isActive ? s.itemActive : s.item} to='/'>Главная</NavLink>
+                        </li>
                         <li >
                             <NavLink className={({ isActive }) => isActive ? s.itemActive : s.item} to='/projects'>Проекты</NavLink>
                         </li>

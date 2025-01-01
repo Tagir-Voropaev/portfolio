@@ -1,5 +1,6 @@
 import s from './ReposSection.module.scss'
 import { Link } from 'react-router-dom'
+import githublogo from '../../../../../public/images/githublogo.jpeg'
 const ReposSection = () => {
     return (
         <section className={s.repos}>
@@ -10,7 +11,7 @@ const ReposSection = () => {
                         <div className={s.reposInfo}>
                             <div className={s.reposTitle}>
                                 <div className={s.reposLogo}>
-                                    <img className={s.reposLogoImg} src="../../public/images/githublogo.jpeg" alt="Тагир Воропаев github портфолио" />
+                                    <img className={s.reposLogoImg} src={githublogo} alt="Тагир Воропаев github портфолио" />
                                 </div>
                                 <p className={s.reposName}>Tagir-Voropaev <span className={s.reposNameHighlight}>/</span> todo-app</p>
                             </div>
@@ -38,7 +39,7 @@ const ReposSection = () => {
                         <div className={s.reposInfo}>
                             <div className={s.reposTitle}>
                                 <div className={s.reposLogo}>
-                                    <img className={s.reposLogoImg} src="../../public/images/githublogo.jpeg" alt="Тагир Воропаев github портфолио" />
+                                    <img className={s.reposLogoImg} src={githublogo} alt="Тагир Воропаев github портфолио" />
                                 </div>
                                 <p className={s.reposName}>Tagir-Voropaev <span className={s.reposNameHighlight}>/</span> music-app</p>
                             </div>
@@ -57,7 +58,7 @@ const ReposSection = () => {
                     <div className={s.reposInfo}>
                         <div className={s.reposTitle}>
                             <div className={s.reposLogo}>
-                                <img className={s.reposLogoImg} src="../../public/images/githublogo.jpeg" alt="Тагир Воропаев github портфолио" />
+                                <img className={s.reposLogoImg} src={githublogo} alt="Тагир Воропаев github портфолио" />
                             </div>
                             <p className={s.reposName}>Tagir-Voropaev <span className={s.reposNameHighlight}>/</span> laslesvpn</p>
                         </div>

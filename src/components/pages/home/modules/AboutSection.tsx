@@ -1,10 +1,11 @@
 import s from './AboutSection.module.scss'
 import { Link } from 'react-router-dom'
+import hackerImg from '../../../../../public/images/hacker.png'
 const AboutSection = () => {
     return (
         <section className={s.about}>
             <div className={s.profession}>
-                <img className={s.professionLogo} src="../../public/images/hacker.png" alt="программист" />
+                <img className={s.professionLogo} src={hackerImg} alt="программист" />
                 <h2 className={s.professionName}>Frontend разработчик</h2>
             </div>
             <div className={s.description}>

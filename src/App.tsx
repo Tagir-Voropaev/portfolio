@@ -5,7 +5,6 @@ import Home from './components/pages/home/Home';
 const App = () => {
     return (
         <div className={styles.app}>
-            <div className={styles.background}></div>
             <Header />
             <main className={styles.content} >
                 <Routes>

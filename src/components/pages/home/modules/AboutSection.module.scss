@@ -7,9 +7,9 @@
     max-width: 1024px;
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0px 10px 25px 6px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 10px 15px 0px rgba(34, 60, 80, 0.2);
     gap: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     .profession {
         display: flex;
         width: 100%;
@@ -25,7 +25,8 @@
         .professionName {
             font-weight: 400;
             font-size: 2.5rem;
-            line-height: 0.5;
+            color: #3c3c3c;
+
         }
     }
 
@@ -36,10 +37,13 @@
         h3 {
             font-weight: 500;
             font-size: 1.5rem;
+            color: #3c3c3c;
             .descriptionNode{
+                color: #3c3c3c;
                 border-bottom: 3px solid #4aaa30;
             }
             .descriptionReact{
+                color: #3c3c3c;
                 border-bottom: 3px solid #307baa;
             }
         }
@@ -47,15 +51,46 @@
         h4 {
             font-weight: 500;
             font-size: 1.2rem;
-
+            color: #3c3c3c;
         }
 
         p {
             font-weight: 500;
             font-size: 1.2rem;
+            color: #3c3c3c;
         }
         .link{
             color: #0a9dff;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about{
+        padding: 30px;
+        .profession {
+            .professionLogo {
+                width: 20px;
+                height: 20px;
+            }
+            .professionName {
+                font-weight: 400;
+                font-size: 1.5rem;
+                color: #3c3c3c;
+            }
+        }
+        .description{
+            h3 {
+                font-size: 1.2rem;
+            }
+    
+            h4 {
+                font-size: 1rem;
+            }
+    
+            p {
+                font-size: 1rem;
+            }
         }
     }
 }

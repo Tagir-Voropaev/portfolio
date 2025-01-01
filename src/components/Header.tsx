@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
 import s from './Header.module.scss'
 import { Link, NavLink } from 'react-router-dom'
 const Header = () => {
-    const [page, setPage] = useState('home')
 
     return (
         <header className={s.header}>

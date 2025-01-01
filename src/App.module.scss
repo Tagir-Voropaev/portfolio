@@ -16,5 +16,10 @@
     top: 0;
     left: 0;
     background: rgba(133, 184, 210, 0.579);
-    background: linear-gradient(180deg, rgba(95, 137, 211, 0.178) 0%, rgba(255,255,255,0.2498249299719888) 60%);    
+    background: linear-gradient(180deg, rgba(95, 137, 211, 0.151) 0%, rgba(255,255,255,0.2498249299719888) 60%);    
+}
+.content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }

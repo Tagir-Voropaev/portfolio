@@ -1,9 +1,12 @@
 import React from 'react'
-import styles from './Home.module.scss'
-const Home =() => {
-  return (
-    <div>Home</div>
-  )
+import AboutSection from './modules/AboutSection'
+
+const Home = () => {
+    return (
+        <>
+            <AboutSection />
+        </>
+    )
 }
 
 export default Home

@@ -1,0 +1,61 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 40px 60px;
+    width: 100%;
+    max-width: 1024px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px 6px rgba(34, 60, 80, 0.2);
+    gap: 30px;
+    margin-bottom: 50px;
+    .profession {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        justify-content: start;
+        align-items: center;
+
+        .professionLogo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .professionName {
+            font-weight: 400;
+            font-size: 2.5rem;
+            line-height: 0.5;
+        }
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        h3 {
+            font-weight: 500;
+            font-size: 1.5rem;
+            .descriptionNode{
+                border-bottom: 3px solid #4aaa30;
+            }
+            .descriptionReact{
+                border-bottom: 3px solid #307baa;
+            }
+        }
+
+        h4 {
+            font-weight: 500;
+            font-size: 1.2rem;
+
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+        .link{
+            color: #0a9dff;
+        }
+    }
+}

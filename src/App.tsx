@@ -7,7 +7,7 @@ const App = () => {
         <div className={styles.app}>
             <div className={styles.background}></div>
             <Header />
-            <main >
+            <main className={styles.content} >
                 <Routes>
                     <Route path="/" element={<Home />} />
                 </Routes>

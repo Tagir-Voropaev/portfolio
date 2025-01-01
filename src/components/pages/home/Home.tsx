@@ -1,10 +1,11 @@
 import React from 'react'
 import AboutSection from './modules/AboutSection'
-
+import ReposSection from './modules/ReposSection'
 const Home = () => {
     return (
         <>
             <AboutSection />
+            <ReposSection/>
         </>
     )
 }

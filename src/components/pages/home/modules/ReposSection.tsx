@@ -1,6 +1,6 @@
-import s from './ReposSection.module.scss'
+import s from '../../../../styles/Home/ReposSection.module.scss'
 import { Link } from 'react-router-dom'
-import githublogo from '../../../../../public/images/githublogo.jpeg'
+import githublogo from '../../../../assets/images/githublogo.jpeg'
 const ReposSection = () => {
     return (
         <section className={s.repos}>
@@ -16,7 +16,7 @@ const ReposSection = () => {
                                 <p className={s.reposName}>Tagir-Voropaev <span className={s.reposNameHighlight}>/</span> todo-app</p>
                             </div>
                             <p className={s.reposDescription}>Приложение-помощник для работы CRM менеджера/рассылки.</p>
-                            <p className={s.reposLink}>View Repo <i className="fa-solid fa-chevron-right"></i></p>
+                            <p className={s.reposLink}>View Repo <i className={`fa-solid fa-chevron-right ${s.reposLinkIcon}`}></i></p>
                         </div>
                         <ul className={s.reposSkills}>
                             <li className={s.reposSkill}>
@@ -44,7 +44,7 @@ const ReposSection = () => {
                                 <p className={s.reposName}>Tagir-Voropaev <span className={s.reposNameHighlight}>/</span> music-app</p>
                             </div>
                             <p className={s.reposDescription}>Аналог Spotify. Next/Nest FullStack приложение.</p>
-                            <p className={s.reposLink}>View Repo <i className="fa-solid fa-chevron-right"></i></p>
+                            <p className={s.reposLink}>View Repo <i className={`fa-solid fa-chevron-right ${s.reposLinkIcon}`}></i></p>
                         </div>
                         <ul className={s.reposSkills}>
                             <li className={s.reposSkill}><span className={`${s.reposSkillHighlight} ${s.reposSkillTypeScript}`}></span><p className={s.reposSkillName}>TypeScript</p></li>
@@ -63,7 +63,7 @@ const ReposSection = () => {
                             <p className={s.reposName}>Tagir-Voropaev <span className={s.reposNameHighlight}>/</span> laslesvpn</p>
                         </div>
                         <p className={s.reposDescription}>Next JS адаптивная вёрстка.</p>
-                        <p className={s.reposLink}>View Repo <i className="fa-solid fa-chevron-right"></i></p>
+                        <p className={s.reposLink}>View Repo <i className={`fa-solid fa-chevron-right ${s.reposLinkIcon}`}></i></p>
                     </div>
                     <ul className={s.reposSkills}>
                         <li className={s.reposSkill}><span className={`${s.reposSkillHighlight} ${s.reposSkillTypeScript}`}></span><p className={s.reposSkillName}>TypeScript</p></li>

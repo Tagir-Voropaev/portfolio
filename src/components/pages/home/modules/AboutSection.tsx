@@ -1,6 +1,6 @@
-import s from './AboutSection.module.scss'
+import s from '../../../../styles/Home/AboutSection.module.scss'
 import { Link } from 'react-router-dom'
-import hackerImg from '../../../../../public/images/hacker.png'
+import hackerImg from '../../../../assets/images/hacker.png'
 const AboutSection = () => {
     return (
         <section className={s.about}>

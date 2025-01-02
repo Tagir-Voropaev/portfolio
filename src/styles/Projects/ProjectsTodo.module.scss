@@ -198,6 +198,27 @@
             }
         }
     }
+    .projectButtons{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 456px;
+        gap: 20px;
+        .projectButton{
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            align-items: center;
+            color: c.$white;
+            width: 240px;
+            height: 50px;
+            border-radius: 15px;
+            background-color: c.$blue-vl;
+            i{
+                color: c.$white;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {

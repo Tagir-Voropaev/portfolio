@@ -9,4 +9,23 @@
     border-top: 1px solid #3c3c3c2d;
     justify-content: space-between;
     align-items: center;
+    .copyright{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9rem;
+        span{
+            margin: 0 5px;
+            font-size: 1rem;
+        }
+        .copyrightYear{
+            color: c.$gray-d;
+        }
+        .copyrightReact{
+            color: c.$blue-l;
+        }
+        .copyrightNode{
+            color: c.$green-d;
+        }
+    }
 }

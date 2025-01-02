@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import s from '../../../styles/Projects/ProjectsTodo.module.scss'
-import { Link } from 'react-router-dom'
 import todo_1 from '../../../assets/images/todoapp.png'
 import todo_2 from '../../../assets/images/todoapp-2.png'
 import todo_3 from '../../../assets/images/todoapp-3.png'
+import { Link } from 'react-router-dom'
+
 const ProjectsTodo = () => {
     const [carousel1, setCarousel1] = useState(0)
     const carouselHandler1 = (item: boolean) => {
@@ -84,6 +85,10 @@ const ProjectsTodo = () => {
                     <p className={s.infoDescription}>Поэтому мной было принято решение разработать приложение-помощник, упрощающее работу в онлайн школе.</p>
                     <p className={s.infoDescription}></p>
                 </section>
+            </div>
+            <div className={s.projectButtons}>
+                <Link className={s.projectButton} to='https://github.com/Tagir-Voropaev/todo-app' target='_blank'><i className="fa-brands fa-github"></i>Посетить репо</Link>
+                <Link className={s.projectButton} to='https://tagir-voropaev.github.io/todo-app/' target='_blank'><i className="fa-solid fa-arrow-up-right-from-square"></i>Посетить демо</Link>
             </div>
         </div>
     )

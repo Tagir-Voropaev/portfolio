@@ -1,6 +1,6 @@
-import s from './Header.module.scss'
+import s from '../styles/Header.module.scss'
 import { Link, NavLink } from 'react-router-dom'
-import myphotoImg from '../../public/images/myphoto.jpg'
+import myphotoImg from '../assets/images/myphoto.jpg'
 const Header = () => {
 
     return (
@@ -25,9 +25,6 @@ const Header = () => {
                         </li>
                         <li>
                             <NavLink className={({ isActive }) => isActive ? s.itemActive : s.item} to='/works'>Готовые работы</NavLink>
-                        </li>
-                        <li>
-                            <NavLink className={({ isActive }) => isActive ? s.itemActive : s.item} to='/notes'>Заметки</NavLink>
                         </li>
                         <li>
                             <NavLink className={({ isActive }) => isActive ? s.itemActive : s.item} to='/contacts'>Контакты</NavLink>

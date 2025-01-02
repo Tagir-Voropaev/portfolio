@@ -1,30 +1,39 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import s from '../../../styles/Projects/Projects.module.scss'
 import todo_1 from '../../../assets/images/todoapp.png'
 import todo_2 from '../../../assets/images/todoapp-2.png'
 import todo_3 from '../../../assets/images/todoapp-3.png'
 import { Link } from 'react-router-dom'
 const Projects = () => {
-    const [carousel, setCarousel] = useState(0)
-    
-  
-    
-    const carouselHandler = (item: boolean) => {
-      
-        
-     
+    const [carousel1, setCarousel1] = useState(0)
+    const [carousel2, setCarousel2] = useState(0)
+    const carouselHandler1 = (item: boolean) => {
         if (item === true) {
-            if (carousel === 2) {
-                setCarousel(2)
+            if (carousel1 === 2) {
+                setCarousel1(2)
             } else {
-
-                setCarousel(carousel + 1)
+                setCarousel1(carousel1 + 1)
             }
         } else {
-            if (carousel === 0) {
-                setCarousel(0)
+            if (carousel1 === 0) {
+                setCarousel1(0)
             } else {
-                setCarousel(carousel - 1)
+                setCarousel1(carousel1 - 1)
+            }
+        }
+    }
+    const carouselHandler2 = (item: boolean) => {
+        if (item === true) {
+            if (carousel2 === 2) {
+                setCarousel2(2)
+            } else {
+                setCarousel2(carousel2 + 1)
+            }
+        } else {
+            if (carousel2 === 0) {
+                setCarousel2(0)
+            } else {
+                setCarousel2(carousel2 - 1)
             }
         }
     }
@@ -39,9 +48,9 @@ const Projects = () => {
                 <li className={`${s.project}`}>
                     <div className={s.projectPreview}>
                         <Link to='/projects/todo-app' className={`${s.projectPreviewList} 
-                        ${carousel === 0 && s.projectPreviewList1}
-                        ${carousel === 1 && s.projectPreviewList2}
-                        ${carousel === 2 && s.projectPreviewList3}
+                        ${carousel1 === 0 && s.projectPreviewList1}
+                        ${carousel1 === 1 && s.projectPreviewList2}
+                        ${carousel1 === 2 && s.projectPreviewList3}
                         `}>
                             <div className={s.projectPreviewItem}>
                                 <img className={s.projectPreviewImg} src={todo_1} alt="" />
@@ -54,13 +63,13 @@ const Projects = () => {
                             </div>
                         </Link>
                         <div className={s.previewButtons}>
-                            <button onClick={() => carouselHandler(false)} className={`${s.previewButton} ${carousel === 0 && s.previewButtonDisabled}`}><i className={`fa-solid fa-angle-left ${s.previewButtonIcon} `}></i></button>
+                            <button onClick={() => carouselHandler1(false)} className={`${s.previewButton} ${carousel1 === 0 && s.previewButtonDisabled}`}><i className={`fa-solid fa-angle-left ${s.previewButtonIcon} `}></i></button>
                             <div className={s.previewDots}>
-                                <span className={`${s.previewDot} ${carousel === 0 && s.previewDotActive}`}></span>
-                                <span className={`${s.previewDot} ${carousel === 1 && s.previewDotActive}`}></span>
-                                <span className={`${s.previewDot} ${carousel === 2 && s.previewDotActive}`}></span>
+                                <span className={`${s.previewDot} ${carousel1 === 0 && s.previewDotActive}`}></span>
+                                <span className={`${s.previewDot} ${carousel1 === 1 && s.previewDotActive}`}></span>
+                                <span className={`${s.previewDot} ${carousel1 === 2 && s.previewDotActive}`}></span>
                             </div>
-                            <button onClick={() => carouselHandler(true)} className={`${s.previewButton} ${carousel === 2 && s.previewButtonDisabled}`} disabled={carousel === 2 && true}><i className={`fa-solid fa-angle-right ${s.previewButtonIcon} `}></i></button>
+                            <button onClick={() => carouselHandler1(true)} className={`${s.previewButton} ${carousel1 === 2 && s.previewButtonDisabled}`} disabled={carousel1 === 2 && true}><i className={`fa-solid fa-angle-right ${s.previewButtonIcon} `}></i></button>
                         </div>
                     </div>
                     <div className={s.projectInfo}>
@@ -87,12 +96,12 @@ const Projects = () => {
                         <Link to='/projects/todo-app' className={s.projectButton}>Подробнее</Link>
                     </div>
                 </li>
-                <li className={`${s.project} ${s.projectReverse}`}>
+                <li className={`${s.project}`}>
                     <div className={s.projectPreview}>
                         <Link to='/projects/todo-app' className={`${s.projectPreviewList} 
-                        ${carousel === 0 && s.projectPreviewList1}
-                        ${carousel === 1 && s.projectPreviewList2}
-                        ${carousel === 2 && s.projectPreviewList3}
+                        ${carousel2 === 0 && s.projectPreviewList1}
+                        ${carousel2 === 1 && s.projectPreviewList2}
+                        ${carousel2 === 2 && s.projectPreviewList3}
                         `}>
                             <div className={s.projectPreviewItem}>
                                 <img className={s.projectPreviewImg} src={todo_1} alt="" />
@@ -105,13 +114,13 @@ const Projects = () => {
                             </div>
                         </Link>
                         <div className={s.previewButtons}>
-                            <button onClick={() => carouselHandler(false)} className={`${s.previewButton} ${carousel === 0 && s.previewButtonDisabled}`}><i className={`fa-solid fa-angle-left ${s.previewButtonIcon} `}></i></button>
+                            <button onClick={() => carouselHandler2(false)} className={`${s.previewButton} ${carousel2 === 0 && s.previewButtonDisabled}`}><i className={`fa-solid fa-angle-left ${s.previewButtonIcon} `}></i></button>
                             <div className={s.previewDots}>
-                                <span className={`${s.previewDot} ${carousel === 0 && s.previewDotActive}`}></span>
-                                <span className={`${s.previewDot} ${carousel === 1 && s.previewDotActive}`}></span>
-                                <span className={`${s.previewDot} ${carousel === 2 && s.previewDotActive}`}></span>
+                                <span className={`${s.previewDot} ${carousel2 === 0 && s.previewDotActive}`}></span>
+                                <span className={`${s.previewDot} ${carousel2 === 1 && s.previewDotActive}`}></span>
+                                <span className={`${s.previewDot} ${carousel2 === 2 && s.previewDotActive}`}></span>
                             </div>
-                            <button onClick={() => carouselHandler(true)} className={`${s.previewButton} ${carousel === 2 && s.previewButtonDisabled}`} disabled={carousel === 2 && true}><i className={`fa-solid fa-angle-right ${s.previewButtonIcon} `}></i></button>
+                            <button onClick={() => carouselHandler2(true)} className={`${s.previewButton} ${carousel2 === 2 && s.previewButtonDisabled}`} disabled={carousel2 === 2 && true}><i className={`fa-solid fa-angle-right ${s.previewButtonIcon} `}></i></button>
                         </div>
                     </div>
                     <div className={s.projectInfo}>

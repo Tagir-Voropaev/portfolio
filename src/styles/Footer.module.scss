@@ -1,0 +1,12 @@
+@use "colors" as c;
+
+.footer{
+    display: flex;
+    width: 100%;
+    max-width: 1024px;
+    padding-top: 20px;
+    height: 60px;
+    border-top: 1px solid #3c3c3c2d;
+    justify-content: space-between;
+    align-items: center;
+}

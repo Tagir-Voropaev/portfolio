@@ -7,7 +7,6 @@ import music from '../../../assets/images/music.png'
 import { Link } from 'react-router-dom'
 const Projects = () => {
     const [carousel1, setCarousel1] = useState(0)
-    const [carousel2, setCarousel2] = useState(0)
     const carouselHandler1 = (item: boolean) => {
         if (item === true) {
             if (carousel1 === 2) {
@@ -23,21 +22,7 @@ const Projects = () => {
             }
         }
     }
-    const carouselHandler2 = (item: boolean) => {
-        if (item === true) {
-            if (carousel2 === 2) {
-                setCarousel2(2)
-            } else {
-                setCarousel2(carousel2 + 1)
-            }
-        } else {
-            if (carousel2 === 0) {
-                setCarousel2(0)
-            } else {
-                setCarousel2(carousel2 - 1)
-            }
-        }
-    }
+ 
     return (
         <>
             <div className={s.topic}>
@@ -99,18 +84,18 @@ const Projects = () => {
                 <li className={`${s.project} ${s.projectReverse}`}>
                     <div className={s.projectPreview}>
                         <Link to='/projects/2' className={`${s.projectPreviewList} 
-                        ${carousel2 === 0 && s.projectPreviewList1}
+                        ${s.projectPreviewList1}
                         `}>
                             <div className={s.projectPreviewItem}>
                                 <img className={s.projectPreviewImg} src={music} alt="" />
                             </div>
                         </Link>
                         <div className={s.previewButtons}>
-                            <button className={`${s.previewButton} ${carousel2 === 0 && s.previewButtonDisabled}`}><i className={`fa-solid fa-angle-left ${s.previewButtonIcon} `}></i></button>
+                            <button className={`${s.previewButton} ${s.previewButtonDisabled}`}><i className={`fa-solid fa-angle-left ${s.previewButtonIcon} `}></i></button>
                             <div className={s.previewDots}>
-                                <span className={`${s.previewDot} ${carousel2 === 0 && s.previewDotActive}`}></span>
+                                <span className={`${s.previewDot} ${s.previewDotActive}`}></span>
                             </div>
-                            <button className={`${s.previewButton} ${carousel2 === 0 && s.previewButtonDisabled}`} disabled={carousel2 === 2 && true}><i className={`fa-solid fa-angle-right ${s.previewButtonIcon} `}></i></button>
+                            <button className={`${s.previewButton} ${s.previewButtonDisabled}`} disabled={true}><i className={`fa-solid fa-angle-right ${s.previewButtonIcon} `}></i></button>
                         </div>
                     </div>
                     <div className={s.projectInfo}>
